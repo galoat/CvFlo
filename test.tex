@@ -19,8 +19,9 @@
 
 % required packages (add your own)
 \usepackage{flowfram}										% column layout
-\usepackage[top=1cm,left=0.5cm,right=0.5cm,bottom=0.5cm]{geometry}% margins
-\usepackage{graphicx}										% figures
+\usepackage[top=1cm,left=0.2cm,right=0.4cm,bottom=0.5cm]{geometry}% margins
+\usepackage{graphicx}
+\geometry{hmargin=0.9  cm,vmargin=0.2cm}										% figures
 \usepackage{url}											% URLs
 \usepackage[usenames,dvipsnames]{xcolor}					% color
 \usepackage{multicol}										% columns env.
@@ -43,7 +44,7 @@
 	\addtolength{\LeftMainSep}{1\columnsep}
  
 % small static frame for the vertical line
-\newstaticframe{1.5pt}{\textheight}{\LeftMainSep}{0pt}
+\newstaticframe{0.8pt}{\textheight}{\LeftMainSep}{0pt}
  
 % content of the static frame
 \begin{staticcontents}{1}
@@ -78,6 +79,12 @@
 	{\textbf{\color{RoyalBlue} #1}}
 
 
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Begin document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,7 +95,7 @@
 \begin{figure}
 	\hfill
 	\includegraphics[width=0.6\columnwidth]{photo}
-	\vspace{-7cm}
+	\vspace{-9cm}
 \end{figure}
 
 \begin{flushright}\small
@@ -119,7 +126,11 @@ Université de Technologie de Belfort Montbéliard (90) Ingénieur en Informatiq
 \tab \textbullet  Participation à l'équipe DevOps avec pour objectif la réduction du time to market \\
 \tab \textbullet Maintenance du run (You build it you run it) \\
 \tab \textbullet Participation à l'élaboration d'une architecture micro-service  \\
- \textit{Technologie utilisé}: JAVA (Spring, SpringBoot, JSP, SPRING MVC, Hibernate), Javascript/HTML/CSS, Junit/Mockito, Docker, Maven/Ant, Git / GitlabCi / Jenkins, Linux, Ansible, Sonar, Methode Agile/Devops, ReactivePrograming, micro-services, ReactJs/VueJs, SAP Hybris
+\\
+ \textit{Technologie utilisé}: JAVA (SpringBoot, Spring Cloud), ReactivePrograming, JS/HTML/CSS, ReactJs/VueJs  \\
+Kubernetes, Junit/Mockito, Docker, Maven, Git / GitlabCi, Linux, \\
+Methode Agile/Devops, , micro-services, 
+
 
 \CVItem{Septembre 2017-Janvier 2018, Thales Services (Paris) }\\
 \textbf{CIRUS}: Automatisation de la livraisons d'applications\\
@@ -138,21 +149,19 @@ Université de Technologie de Belfort Montbéliard (90) Ingénieur en Informatiq
 \CVItem{Développement applicatif}
 \begin{multicols}{2}
 \begin{compactitem}[\color{RoyalBlue}$\circ$]
-	\item Java: Spring/Hibernate/Spring Cloud
-	\item  JUnit/Mockito/Expresso/Robolectric
-	\item  HTML5/CSS,  ReactJS, Vue.js
+	\item Java(Spring/Hibernate/Spring Cloud...)
+	\item JUnit/Mockito/Robolectric
+	\item HTML5/CSS, ReactJS, Vue.js
 	\item Android
-	 \item Kotlin 
-	\item C++
+	\item Kotlin 
 \end{compactitem}
 \end{multicols}
 
 \CVItem{Outils }
-\begin{multicols}{3}
+\begin{multicols}{2}
 \begin{compactitem}[\color{RoyalBlue}$\circ$]
-	\item Jenkins/GitlabCi
-	\item  Docker/Rancher/Swarm
-	\item  Ansible/ Terraform
+	\item Git/GitlabCi
+	\item  Kubernetes/Docker
 \end{compactitem}
 \end{multicols}
 \CVItem{Methods}
@@ -164,7 +173,8 @@ Université de Technologie de Belfort Montbéliard (90) Ingénieur en Informatiq
 \end{multicols}
 
 
-\begin{minipage}{0.30\textwidth}
+\noindent
+ \begin{minipage}{0.60\textwidth}
 \CVSection{Langue }
 \begin{enumerate}[\color{RoyalBlue}$\circ$]
   \item Anglais courant (C1-BULAT)\\
@@ -172,13 +182,21 @@ Université de Technologie de Belfort Montbéliard (90) Ingénieur en Informatiq
 \end{enumerate}
 \end{minipage}%
 \hfill
-\begin{minipage}{0.63\textwidth}
+
+\begin{multicols}{2}
+Column 1
+\columnbreak
+Column 2
+\end{multicols}
+
+\begin{minipage}{0.20\textwidth}
 \SmallSep
+\setlength{\parindent}{0pt}
 \CVSection{Hobbies}
 \begin{tabular}{|p{\textwidth}}
 \begin{multicols}{1}
 \begin{enumerate}[\color{RoyalBlue}$\circ$]
-  \item Animateur en colonies de vacance 
+  \item Animation (Colonies)
   \item Music (Trompette/Trombone)   
 \item Triathlon
 \end{enumerate}
