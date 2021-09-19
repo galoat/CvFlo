@@ -1,0 +1,204 @@
+%%% LaTeX Template: Designer's CV
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com.
+%%% Date: March 2012
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document properties and packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,11pt,final]{memoir}
+
+% misc
+\renewcommand{\familydefault}{bch}	% font
+\pagestyle{empty}					% no pagenumbering
+\setlength{\parindent}{0pt}			% no paragraph indentation
+
+\newcommand\tab[1][1,8cm]{\hspace*{#1}}
+
+% required packages (add your own)
+\usepackage{flowfram}										% column layout
+\usepackage[top=1cm,left=0.2cm,right=0.4cm,bottom=0.5cm]{geometry}% margins
+\usepackage{graphicx}
+\geometry{hmargin=0.9  cm,vmargin=0.2cm}										% figures
+\usepackage{url}											% URLs
+\usepackage[usenames,dvipsnames]{xcolor}					% color
+\usepackage{multicol}										% columns env.
+	\setlength{\multicolsep}{0pt}
+\usepackage{paralist}										% compact lists
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Create column layout
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define length commands
+\setlength{\vcolumnsep}{\baselineskip}
+\setlength{\columnsep}{\vcolumnsep}
+
+% frame setup (flowfram package)
+% left frame
+\newflowframe{0.22\textwidth}{\textheight}{0pt}{0pt}[left]
+	\newlength{\LeftMainSep}
+	\setlength{\LeftMainSep}{0.2\textwidth}
+	\addtolength{\LeftMainSep}{1\columnsep}
+ 
+% small static frame for the vertical line
+\newstaticframe{0.8pt}{\textheight}{\LeftMainSep}{0pt}
+ 
+% content of the static frame
+\begin{staticcontents}{1}
+\hfill
+\tikz{%
+	\draw[loosely dotted,color=RoyalBlue,line width=1.5pt,yshift=0]
+	(0,0) -- (0,\textheight);}%
+\hfill\mbox{}
+\end{staticcontents}
+ 
+% right frame
+\addtolength{\LeftMainSep}{1.5pt}
+\addtolength{\LeftMainSep}{1\columnsep}
+\newflowframe{0.7\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define macros (for convience)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Sep}{\vspace{1.5em}}
+\newcommand{\SmallSep}{\vspace{0.2em}}
+
+\newenvironment{AboutMe}
+	{\ignorespaces\textbf{\color{RoyalBlue} About me}}
+	{\Sep\ignorespacesafterend}
+	
+\newcommand{\CVSection}[1]
+	{\Large\textbf{#1}\par
+	\normalsize\normalfont}
+
+\newcommand{\CVItem}[1]
+	{\textbf{\color{RoyalBlue} #1}}
+
+
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Left frame
+%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+	\hfill
+	\includegraphics[width=0.6\columnwidth]{photo}
+	\vspace{-9cm}
+\end{figure}
+
+\begin{flushright}\small
+	LACOUR Florian \\
+	\url{florlacour@gmail.com}  \\
+	06 12 22 54 91
+\end{flushright}\normalsize
+\framebreak
+
+
+% Right frame
+%%%%%%%%%%%%%%%%%%%%
+\Huge\bfseries {\color{RoyalBlue}  LACOUR Florian} \\
+\Large\bfseries  Software Engineer \ \\
+% Education
+\CVSection{Formation}
+\CVItem{2012  - 2017: UTBM }\\
+Université de Technologie de Belfort Montbéliard (90) Software Engineer
+
+% Experience
+\CVSection{Experiences}
+
+\CVItem{September 2019 - Versusmind (Strasbourg) }\\
+\textbf{Helios (EPS)}: Home Protection system\\
+\textbf{Task}: Redesign the remote monitoring and assistance services within a single information system that can manage all the company's contract and product (from prospect to After Sales Services) in France and internationnaly.\\
+\textbf{Technologies used}: Java(SpringBoot -Hibernate- Junit- Mockito) - JavaFx - Kafka - ELK - SQL\\
+\textbf{Methodologie}: MicroService, CQRS, Domain Driven Development \\
+\textbf{Tools}: Git - Atlasian tools - Code Review
+
+\CVItem{January 2018 - September 2019, Capgemini (Lille) }\\
+\textbf{Auchan}: ECOMM:  E-Commerce Site\\
+\textbf{Task} \\
+ \tab \textbullet  Developement of the catalog administration interface\\
+\tab \textbullet  Member of a feature team of 5 people and of the DevOps team (2 people)\\
+\tab \textbullet  Intenational context the team was in Morocco and France and the site was fot Poland and Italy\\
+ \textbf{Technologie used}: JAVA (SpringBoot, Spring Cloud), ReactivePrograming, JS/HTML/CSS, ReactJs/VueJs  \\
+ \textbf{Tools}:  Kubernetes, Junit/Mockito, Docker, Maven, Git / GitlabCi, Linux, \\
+ \textbf{Methodlogie}  Agile/Devops,
+
+\CVItem{September-January 2018, Thales (Paris)}\\
+Manual testing
+
+\CVItem{February-July 2017, Parkeon (Besançon)}\\
+\textbf{AFCANDEV}: Creation of a proof of concept for maintenance application for a ticket vending machine. \\
+ \textit{Technologies used}: Android(Java), ReactJs, Junit, Jenkins, Python, Git, methode agile
+
+% Skills
+\CVSection{Skills}
+\CVItem{Applicatif Developement}
+\begin{multicols}{2}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+	\item Java(Spring/Hibernate/Spring Cloud...)
+	\item JUnit/Mockito
+	\item HTML5/CSS, ReactJS, Vue.js
+	\item Android
+	\item Kotlin 
+\end{compactitem}
+\end{multicols}
+
+\CVItem{Tools }
+\begin{multicols}{2}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+	\item Git/GitlabCi/Jenkins
+	\item  ELK
+	\item  Docker
+\end{compactitem}
+\end{multicols}
+\CVItem{Methods}
+\begin{multicols}{2}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+	\item Agile (Kamban, SCRUM)
+	\item  Devops
+\end{compactitem}
+\end{multicols}
+
+
+\noindent
+
+
+\begin{multicols}{2}
+\CVSection{Langue }
+\begin{enumerate}[ \color{RoyalBlue}$\circ$]
+  \item English\\
+\end{enumerate}
+\columnbreak
+
+\CVSection{Hobbies}
+\begin{tabular}{|p{\textwidth}}
+
+\begin{enumerate}[\color{RoyalBlue}$\circ$]
+  \item Summer camp leader
+  \item Triathlon
+\end{enumerate}
+
+\end{tabular}
+\end{multicols}
+
+\SmallSep
+\framebreak
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
